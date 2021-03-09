@@ -40,12 +40,76 @@
         <button>GJ</button>
     </div>
     
+    <!-- Donation Input Fields -->
+    <div>
+     <form>
     <div id="donation-input">
         <!-- Item Name (Text Field)-->
-        <!-- Item Category (Drop Down Menu)-->
-        <!-- Quantity (Text Field)-->
+        <div class="field">
+            <label class="label"><h3>Item Name</h3></label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g Toothpaste">
+            </div>
+          </div>
+          
+<!-- Item Category (Drop Down Menu)-->
+<div class="control">
+    <div class="select">
+      <select>
+        <option>Item Category</option>
+        <option> Option 1</option>
+        <option> Option 2</option>
+        <option> Option 3</option>
+        <option> Option 4</option>
+        <option> Option 5</option>
+        <option> Option 6</option>
+        <option> Option 7</option>
+        <option> Option 8</option>
+        <option> Option 9</option>
+      </select>
+    </div>
+  </div>
+
+          <div class="field">
+            <label class="label"><h3>Amount</h3></label>
         <!-- Value (Text Field)-->
-        <button>Save</button>
+        <div class="field has-addons has-addons-right">
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>$</option>
+                </select>
+              </span>
+            </p>
+            <p class="control">
+              <input class="input" type="text" placeholder="Amount of money">
+            </p>
+            <p class="control">
+              <a class="button is-primary">
+              </a>
+            </p>
+          </div>
+        <!--GIF Displayed-->
+      <!--local storage save-->
+      <div id="result"></div>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("Item-name");
+  localStorage.setItem("Amount");
+  localStorage.setItem("Building-Name");
+  localStorage.setItem("Item-category");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem();
+} else {
+  document.getElementById("result").innerHTML = "Donation Submitted";
+}
+</script>
+            <button type="submit">
+              Submit Donation
+            </button>
+     </form>
     </div>
 
     <footer>
