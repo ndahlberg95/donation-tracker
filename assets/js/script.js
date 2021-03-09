@@ -1,3 +1,10 @@
+function setPerson(){
+    var person = { 'name': getElementById('name'), 'photo': getElementById('photo')};
+    
+    // Put the object into the storage
+        alert(person);
+        localStorage.setItem('person', JSON.stringify(person));
+    };
 console.log ("Hello World!")
 var data = getData()
 
@@ -23,6 +30,7 @@ function displayData(){
     .text(data.items[0].name)
 }
 
+//<<<<<<< stats
 var min;
 var max;
 var sum = 0;
@@ -41,3 +49,6 @@ for ( var i = 0; i < arr.length()-1; i++){
 } 
 
 displayData()
+//=======
+//displayData()
+//>>>>>>> main
