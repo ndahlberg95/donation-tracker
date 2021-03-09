@@ -30,4 +30,25 @@ function displayData(){
     .text(data.items[0].name)
 }
 
+//<<<<<<< stats
+var min;
+var max;
+var sum = 0;
+
+for ( var i = 0; i < arr.length()-1; i++){
+    if (i==0){
+        min = arr[i]
+        max = arr[i]
+    } else {
+        if (arr[i] < min)
+            min = arr[i];
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    sum = sum + arr[i];
+} 
+
 displayData()
+//=======
+//displayData()
+//>>>>>>> main
