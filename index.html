@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Tracker Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 
 <body>
@@ -12,20 +13,27 @@
         <!-- Company Name/Logo -->
     </header>
 
-    <!-- Item Count -->
-    <div>
+    <div id="item-graph">
         <h2>Item List</h2>
+        <p id="item-1"></p>
         <!-- bar graph displaying item quantities -->
     </div>
 
-    <!-- STATS -->
-    <div> 
-        <!-- Most Needed Item -->
-        <!-- Total Number of Donations -->
-        <!-- Item We Have Most Of -->
+    <div id="top-stats"> 
+        <div id="need-most">
+            <h3>We need ________ the most!</h3>
+        </div>
+
+        <div id="total-donations">
+            <h3>We have a total of _________ donations!</h3>
+        </div>
+
+        <div id="have-most">
+            <h3>We have the most of ________!</h3>
+        </div>
     </div>
 
-    <div>
+    <div id="building-buttons">
         <button>A Building</button>
         <button>B Building</button>
         <button>KRH</button>
@@ -35,6 +43,7 @@
     <!-- Donation Input Fields -->
     <div>
      <form>
+    <div id="donation-input">
         <!-- Item Name (Text Field)-->
         <div class="field">
             <label class="label"><h3>Item Name</h3></label>
@@ -107,6 +116,8 @@ if (typeof(Storage) !== "undefined") {
         <h3>Made with Luv</h3>
         <p>Copyright 2021 by Chinchillas</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
