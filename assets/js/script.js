@@ -48,6 +48,24 @@ for ( var i = 0; i < arr.length()-1; i++){
     sum = sum + arr[i];
 } 
 
+
+// Form Code
+function validate() {
+    var itemName = document.getElementById ("itemName");
+    var Value = document.getElementById ("Value");
+
+    if(itemName.value.trim() == "" ||Value.value.trim()=="")
+
+    {
+        alert("No Blank Values Allowed");
+        return false;
+    }
+    else {
+        true;
+
+    }
+}
+
 displayData()
 //=======
 //displayData()

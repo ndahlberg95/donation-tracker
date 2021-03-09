@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Tracker Project</title>
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    <!-- Link for bulma style sheet -->
 </head>
 
 <body>
@@ -12,7 +13,7 @@
         <h1>Donation Tracker</h1>
         <!-- Company Name/Logo -->
     </header>
-
+      
     <div id="item-graph">
         <h2>Item List</h2>
         <p id="item-1"></p>
@@ -41,20 +42,19 @@
     </div>
     
     <!-- Donation Input Fields -->
-    <div>
-     <form>
-    <div id="donation-input">
+     <form onsubmit="return validate()"  action="message.html">
+        <div id="donation-input">
         <!-- Item Name (Text Field)-->
         <div class="field">
             <label class="label"><h3>Item Name</h3></label>
-            <div class="control">
-              <input class="input" type="text" placeholder="e.g Toothpaste">
+            <div class="form-control">
+              <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
             </div>
           </div>
           
 <!-- Item Category (Drop Down Menu)-->
-<div class="control">
-    <div class="select">
+    <div class="control">
+     <div class="select">
       <select>
         <option>Item Category</option>
         <option> Option 1</option>
@@ -67,8 +67,7 @@
         <option> Option 8</option>
         <option> Option 9</option>
       </select>
-    </div>
-  </div>
+   
 
           <div class="field">
             <label class="label"><h3>Amount</h3></label>
@@ -82,7 +81,7 @@
               </span>
             </p>
             <p class="control">
-              <input class="input" type="text" placeholder="Amount of money">
+              <input class="input" id="Value" type="text" placeholder="Amount of money" required>
             </p>
             <p class="control">
               <a class="button is-primary">
@@ -92,33 +91,23 @@
         <!--GIF Displayed-->
       <!--local storage save-->
       <div id="result"></div>
-<script>
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-  // Store
-  localStorage.setItem("Item-name");
-  localStorage.setItem("Amount");
-  localStorage.setItem("Building-Name");
-  localStorage.setItem("Item-category");
-  // Retrieve
-  document.getElementById("result").innerHTML = localStorage.getItem();
-} else {
-  document.getElementById("result").innerHTML = "Donation Submitted";
-}
-</script>
             <button type="submit">
               Submit Donation
             </button>
      </form>
     </div>
 
-    <footer>
-        <h3>Made with Luv</h3>
-        <p>Copyright 2021 by Chinchillas</p>
-    </footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
-</body>
 
+    <div>
+        <footer id="footer">
+        <h3>Made with Luv</h3>
+        <p>Copyright 2021 by Chinchillas</p>
+        </footer>
+    </div>
+
+</body>
 </html>
