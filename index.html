@@ -42,6 +42,7 @@
     </div>
     
     <!-- Donation Input Fields -->
+ <div id="donation-input">
      <form onsubmit="return validate()"  action="message.html">
         <div id="donation-input">
         <!-- Item Name (Text Field)-->
@@ -96,8 +97,22 @@
             </button>
      </form>
     </div>
+</div>
 
-
+<script>
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+      // Store
+      localStorage.setItem("Item-name");
+      localStorage.setItem("Amount");
+      localStorage.setItem("Building-Name");
+      localStorage.setItem("Item-category");
+      // Retrieve
+      document.getElementById("result").innerHTML = localStorage.getItem();
+    } else {
+      document.getElementById("result").innerHTML = "Donation Submitted";
+    }
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
