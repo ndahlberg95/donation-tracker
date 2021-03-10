@@ -5,13 +5,15 @@ function setPerson(){
         alert(person);
         localStorage.setItem('person', JSON.stringify(person));
     };
+
 console.log ("Hello World!")
+
 var data = getData()
 
 function getData(){
     // var x =
     // {
-    //     items : [
+    //     items: [
     //         {name: "toilet paper", amount: 2 },
     //         {name: "tissues", amount: 8 },
     //     ]
@@ -42,10 +44,13 @@ for ( var i = 0; i < arr.length()-1; i++){
     } else {
         if (arr[i] < min)
             min = arr[i];
+            document.getElementById("min").innerHTML=("min" + "" + items.name);
         if (arr[i] > max)
             max = arr[i];
+            document.getElementById("max").innerHTML=("max" + "" + items.name);
     }
     sum = sum + arr[i];
+    document.getElementById("sum").innerHTML=("sum" + "" + items.name)
 } 
 
 displayData()
