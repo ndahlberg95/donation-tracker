@@ -5,7 +5,9 @@ function setPerson(){
         alert(person);
         localStorage.setItem('person', JSON.stringify(person));
     };
+
 console.log ("Hello World!")
+
 var data = getData()
 
 function getData(){
@@ -24,6 +26,7 @@ function getData(){
         // ]
     }
     return input
+
     return JSON.parse (localStorage.getItem("data"))
 }
 
@@ -38,26 +41,26 @@ function displayData(){
 }
 
 
-
-//<<<<<<< stats
 var min;
 var max;
 var sum = 0;
 
-// for ( var i = 0; i < arr.length()-1; i++){
-//     if (i==0){
-//         min = arr[i]
-//         max = arr[i]
-//     } else {
-//         if (arr[i] < min)
-//             min = arr[i];
-//         if (arr[i] > max)
-//             max = arr[i];
-//     }
-//     sum = sum + arr[i];
-// } 
+
+for ( var i = 0; i < arr.length()-1; i++){
+    if (i==0){
+        min = arr[i]
+        max = arr[i]
+    } else {
+        if (arr[i] < min)
+            min = arr[i];
+            document.getElementById("min").innerHTML=("min" + "" + items.name);
+        if (arr[i] > max)
+            max = arr[i];
+            document.getElementById("max").innerHTML=("max" + "" + items.name);
+    }
+    sum = sum + arr[i];
+    document.getElementById("sum").innerHTML=("sum" + "" + items.name)
+} 
 
 displayData()
-//=======
-//displayData()
-//>>>>>>> main
+

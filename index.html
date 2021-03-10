@@ -73,24 +73,27 @@
 
     <div id="top-stats"> 
         <div id="need-most">
-            <h3>We need ________ the most!</h3>
+          <div id="min"></div>
+          <h3>MOST NEEDED ITEM</h3>
         </div>
 
         <div id="total-donations">
-            <h3>We have a total of _________ donations!</h3>
+          <div id="sum"></div>
+          <h3>TOTAL DONATIONS</h3>
         </div>
 
         <div id="have-most">
-            <h3>We have the most of ________!</h3>
+          <div id="max"></div>
+          <h3>MOST DONATED ITEM</h3>
         </div>
     </div>
 
-    <div id="building-buttons">
+    <!-- <div id="building-buttons">
         <button>A Building</button>
         <button>B Building</button>
         <button>KRH</button>
         <button>GJ</button>
-    </div>
+    </div> -->
     
     <!-- Donation Input Fields -->
     <div>
@@ -100,7 +103,7 @@
         <div class="field">
             <label class="label"><h3>Item Name</h3></label>
             <div class="control">
-              <input class="input" type="text" placeholder="e.g Toothpaste">
+              <input class="input" id="item-name" type="text" placeholder="e.g Toothpaste">
             </div>
           </div>
           
@@ -134,7 +137,7 @@
               </span>
             </p>
             <p class="control">
-              <input class="input" type="text" placeholder="Amount of money">
+              <input class="input" id="amount" type="text" placeholder="Amount of money">
             </p>
             <p class="control">
               <a class="button is-primary">
@@ -144,20 +147,22 @@
         <!--GIF Displayed-->
       <!--local storage save-->
       <div id="result"></div>
+
 <!--<script>
 // Check browser support
 if (typeof(Storage) !== "undefined") {
   // Store
-  localStorage.setItem("Item-name");
-  localStorage.setItem("Amount");
-  localStorage.setItem("Building-Name");
-  localStorage.setItem("Item-category");
+  localStorage.setItem("item-name");
+  localStorage.setItem("amount");
+  localStorage.setItem("building-Name");
+  localStorage.setItem("item-category");
   // Retrieve
   document.getElementById("result").innerHTML = localStorage.getItem();
 } else {
   document.getElementById("result").innerHTML = "Donation Submitted";
 }
-</script>-->
+</script> -->
+
             <button type="submit">
               Submit Donation
             </button>
