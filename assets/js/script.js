@@ -52,3 +52,24 @@ displayData()
 //=======
 //displayData()
 //>>>>>>> main
+
+function increaseDonation()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+    window.localStorage.setItem('Click to Add to the Number of Donations', 'number');
+    // localStorage.setItem ("number")
+    // console.log(increaseDonation);
+    console.log(value);
+    
+}
+function MostItems() {
+    document.getElementById("MostResults").innerHTML = "1 Billion Candies Congrats";
+    
+  }
+  function MostNeeded() {
+    
+    document.getElementById("MostNeededResults").innerHTML = "We Need Toothbrushes";
+  }

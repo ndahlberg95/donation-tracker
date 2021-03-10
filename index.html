@@ -20,16 +20,29 @@
     </div>
 
     <div id="top-stats"> 
-        <div id="need-most">
-            <h3>We need ________ the most!</h3>
-        </div>
+      <div>
+
+        <button id ="MostNeededBtn" onclick="MostNeeded()">Click to See the Items That we Need Most</button>
+
+          <h3 id="MostNeededResults"></h3>
+        
+      </div>
 
         <div id="total-donations">
-            <h3>We have a total of _________ donations!</h3>
+          <form>
+            <input type="text" id="number" placeholder="Enter Number"/>
+            <input type="button" onclick="increaseDonation()" value="Click to Add to the Number of Donations" />
+            <button type="reset" value="Reset">Reset</button>
+            
+          </form>
+            
         </div>
 
         <div id="have-most">
-            <h3>We have the most of ________!</h3>
+          <button id ="MostItemsBtn" onclick="MostItems()">Click to See the Items we Have the Most of</button>
+
+          <h3 id="MostResults"></h3>
+           
         </div>
     </div>
 
