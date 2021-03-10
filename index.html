@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Tracker Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+</head>
+    <header class="header">
+      
+        <!-- Company Name/Logo -->
+
+
+        <nav class="level">
+          <!-- Left side -->
+          <div class="level-left">
+            <div class="level-item">
+               <h2 class="title is-2">Donation Tracker
+               </h2>
+            </div>
+            <div class="level-item">
+            </div>
+          </div>
+
+        <!-- Right side -->
+        <div class="level-right">
+          <div class="card-image">
+            <figure class="image is-128x128">
+              <img src="./assets/images/ywcautahheaderlogo.png" alt="YWCA Utah Logo">
+            </figure>
+            
+          </div>
+        </div>
+          
+    </header>
+
+    <body>
+
+    <div id="item-graph">
+        <h2>Item List</h2>
+        <p id="item-1"></p>
+        <!-- bar graph displaying item quantities -->
+        <div id="barchart_material" style="width: 500px; height: 500px;"></div>
+    </div>
+
+    <div id="top-stats"> 
+        <div id="need-most">
+          <div id="min"></div>
+          <h3>MOST NEEDED ITEM</h3>
+        </div>
+
+        <div id="total-donations">
+          <div id="sum"></div>
+          <h3>TOTAL DONATIONS</h3>
+        </div>
+
+        <div id="have-most">
+          <div id="max"></div>
+          <h3>MOST DONATED ITEM</h3>
+        </div>
+    </div>
+
+    <!-- <div id="building-buttons">
+        <button>A Building</button>
+        <button>B Building</button>
+        <button>KRH</button>
+        <button>GJ</button>
+    </div> -->
+    
+    <!-- Donation Input Fields -->
+    <div>
+     <form>
+    <div id="donation-input">
+        <!-- Item Name (Text Field)-->
+        <div class="field">
+            <label class="label"><h3>Item Name</h3></label>
+            <div class="control">
+              <input class="input" id="item-name" type="text" placeholder="e.g Toothpaste">
+            </div>
+          </div>
+          
+<!-- Item Category (Drop Down Menu)-->
+<div class="control">
+    <div class="select">
+      <select>
+        <option>Item Category</option>
+        <option> Option 1</option>
+        <option> Option 2</option>
+        <option> Option 3</option>
+        <option> Option 4</option>
+        <option> Option 5</option>
+        <option> Option 6</option>
+        <option> Option 7</option>
+        <option> Option 8</option>
+        <option> Option 9</option>
+      </select>
+    </div>
+  </div>
+
+          <div class="field">
+            <label class="label"><h3>Amount</h3></label>
+        <!-- Value (Text Field)-->
+        <div class="field has-addons has-addons-right">
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>$</option>
+                </select>
+              </span>
+            </p>
+            <p class="control">
+              <input class="input" id="amount" type="text" placeholder="Amount of money">
+            </p>
+            <p class="control">
+              <a class="button is-primary">
+              </a>
+            </p>
+          </div>
+        <!--GIF Displayed-->
+      <!--local storage save-->
+      <div id="result"></div>
+
+<!--<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("item-name");
+  localStorage.setItem("amount");
+  localStorage.setItem("building-Name");
+  localStorage.setItem("item-category");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem();
+} else {
+  document.getElementById("result").innerHTML = "Donation Submitted";
+}
+</script> -->
+
+            <button type="submit">
+              Submit Donation
+            </button>
+     </form>
+    </div>
+
+  
+
+    <footer>
+        <h3>Made with Luv</h3>
+        <p>Copyright 2021 by Chinchillas</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
