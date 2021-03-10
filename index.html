@@ -12,6 +12,8 @@
   <title>Donation Tracker Project</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
     google.charts.load('current', { 'packages': ['bar'] });
@@ -81,6 +83,7 @@
       <!-- bar graph displaying item quantities -->
       <div id="barchart_material" style="width: 500px; height: 500px;"></div>
     </div>
+   
 
     <div class=column>
       <div id="top-stats">
@@ -115,7 +118,14 @@
         <div class="field">
             <label class="label"><h3>Item Name</h3></label>
             <div class="form-control">
-              <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
+              <input class="input" class="input[type=text]" id="itemName" type="text" placeholder="e.g Toothpaste" required>
+              <div class="level-left" id="logo">
+                <div class="card-image">
+                  <figure class="image is-200x200">
+                    <img src="./assets/images/formpic.png" alt="YWCA Form Logo">
+                  </figure>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -165,7 +175,7 @@
             </span>
           </p>
           <p class="control">
-            <input class="input" id="amount" type="text" placeholder="Amount of money">
+            <input class="input" id="amount" type="text" placeholder="Value">
           </p>
         
         </div>
@@ -193,29 +203,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label">
-                <h3>Amount</h3>
-              </label>
-              <!-- Value (Text Field)-->
-              <div class="field has-addons has-addons-right">
-                <p class="control">
-                  <span class="select">
-                    <select>
-                      <option>$</option>
-                    </select>
-                  </span>
-                </p>
-                <p class="control">
-                  <input class="input" id="amount" type="text" placeholder="Amount of money">
-                </p>
-                <p class="control">
-                    <h5>$</h5>
-                 
-                </p>
               </div>
               <!--GIF Displayed-->
               <!--local storage save-->
