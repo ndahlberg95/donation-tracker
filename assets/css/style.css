@@ -1,8 +1,25 @@
+header {
+    padding: 10px;
+}
+
+footer {
+    padding: 100px;
+    text-align: center;
+}
+
+#logo {
+    padding: 30px;
+}
+
+#item-graph {
+    padding: 30px;
+}
+
 #top-stats {
     display: flex;
     flex-direction: row;
     text-align: center;
-    padding-left: 500px;
+    padding-left: 50px;
 }
 
 #need-most {
@@ -15,5 +32,9 @@
 
 #have-most {
     padding: 100px;
+}
+
+#donation-input {
+    width: 80%;
 }
 
