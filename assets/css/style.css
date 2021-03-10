@@ -1,0 +1,40 @@
+header {
+    padding: 10px;
+}
+
+footer {
+    padding: 100px;
+    text-align: center;
+}
+
+#logo {
+    padding: 30px;
+}
+
+#item-graph {
+    padding: 30px;
+}
+
+#top-stats {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 50px;
+}
+
+#need-most {
+    padding: 100px;
+}
+
+#total-donations {
+    padding: 100px;
+}
+
+#have-most {
+    padding: 100px;
+}
+
+#donation-input {
+    width: 80%;
+}
+
