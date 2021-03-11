@@ -1,11 +1,11 @@
 const input = document.getElementsByName('input')
-for (var i = 0; i < input.length; i++) {
-    var a = input[i];
-    k = k + "item-name[" + i + "].value="
-        + a.value + " ";
+// for (var i = 0; i < input.length; i++) {
+//     var a = input[i];
+//     k = k + "item-name[" + i + "].value="
+//         + a.value + " ";
 
-    items: []
-};
+//     items: []
+// };
 const output = document.getElementById("item-name");
 const save = document.getElementById("save");
 
@@ -29,12 +29,17 @@ function setData() {
 }
 
 let myArray =[]
+let items = JSON.parse(localStorage.getItem('input'));
+if (items) {
+    myArray = items;
+    console.log(myArray);
+}
 function storeData(event) {
     event.preventDefault()
     localStorage.setItem('input', setData());
     
-    myArray.push(JSON.parse(localStorage.getItem("myArray")));
-    localStorage.setItem('input', JSON.stringify(a));
+    myArray.push(document.getElementById('item-name').value);
+    localStorage.setItem('input', JSON.stringify(myArray));
     save.addEventListener('click', storeData, false);
 }
 
