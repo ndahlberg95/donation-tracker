@@ -1,48 +1,41 @@
-    const input = document.getElementById('item-name')
-    const output = document.getElementById("item-name")
-    const save = document.getElementById("save")
+const input = document.getElementsByName('input')
+for (var i = 0; i < input.length; i++) {
+    var a = input[i];
+    k = k + "item-name[" + i + "].value="
+        + a.value + " ";
+
+    items: []
+};
+const output = document.getElementById("item-name");
+const save = document.getElementById("save");
 
 let data = getData()
 
-function getData(){
+function getData() {
 
     //need to make dynamic based on input
     save.addEventListener("click", setData);
 
-    output.textContent = localStorage.getItem("#item-name")
-    input.value = localStorage.getItem("#item-name");
 
-    
-    
-    return JSON.parse (localStorage.getItem("data"));
+    output.textContent = localStorage.getItem("input")
+    input.value = localStorage.getItem("input");
+
+    return JSON.parse(localStorage.getItem("data"));
 }
 
-console.log(data)
-
 function setData() {
-    dataToStore = document.getElementById('txtStore').value;
+    dataToStore = document.getElementById('item-name').value;
     return dataToStore;
 }
 
 
-
-function storeData() {
+function storeData(event) {
+    event.preventDefault()
     localStorage.setItem('input', setData());
+
 }
 
 save.addEventListener('click', storeData, false);
-
-// function addDonation()
-
-// for (var i = 0; i<input.length; i++)
-// {
-//   var a = input [i];
-//   k=k +"item-name[" +i +"].value="
-//    + a.value + " ";
-
-// items : []
-// }
-// return input
 
 
 // var min;
