@@ -24,12 +24,30 @@ function storeData(event) {
 
 save.addEventListener('click', storeData, false);
 
-let counter = 0; 
-for (const obj of myArray){
-    if (obj.input ==="0") counter++;
-}
+console.log(myArray)
 
-console.log(counter);
+// let counter = 0; 
+// for (let obj of myArray){
+//     counter++;
+//     console.log(obj, counter);
+// }
+
+let counter = 0; 
+var myObject ={}
+for (let obj of myArray){ 
+   counter++
+   console.log(obj, counter)
+   if(myObject[obj]){
+    myObject[obj]=myObject[obj]+1
+   }
+   else{
+    myObject[obj]=1
+   }
+
+}
+console.log(myObject)
+
+
 
 
 // var min;
