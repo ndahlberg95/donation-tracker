@@ -26,12 +26,6 @@ save.addEventListener('click', storeData, false);
 
 console.log(myArray)
 
-// let counter = 0; 
-// for (let obj of myArray){
-//     counter++;
-//     console.log(obj, counter);
-// }
-
 let counter = 0; 
 var myObject ={}
 for (let obj of myArray){ 
