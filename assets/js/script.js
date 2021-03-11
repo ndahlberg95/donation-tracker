@@ -1,5 +1,5 @@
-    const input = document.getElementById('input')
-    const output = document.getElementById('')
+    const input = document.getElementById('item-name')
+    const output = document.getElementById("item-name")
     const save = document.getElementById("save")
 
 let data = getData()
@@ -9,34 +9,40 @@ function getData(){
     //need to make dynamic based on input
     save.addEventListener("click", setData);
 
-    output.textContent = localStorage.getItem("#text")
-    input.value = localStorage.getItem("#text");
+    output.textContent = localStorage.getItem("#item-name")
+    input.value = localStorage.getItem("#item-name");
 
+    
+    
     return JSON.parse (localStorage.getItem("data"));
 }
+
+console.log(data)
 
 function setData() {
     dataToStore = document.getElementById('txtStore').value;
     return dataToStore;
 }
 
+
+
 function storeData() {
     localStorage.setItem('input', setData());
 }
 
-btnStore.addEventListener('click', storeData, false);
+save.addEventListener('click', storeData, false);
 
-function addDonation()
+// function addDonation()
 
-for (var i = 0; i<input.length; i++)
-{
-  var a = input [i];
-  k=k +"item-name[" +i +"].value="
-   + a.value + " ";
+// for (var i = 0; i<input.length; i++)
+// {
+//   var a = input [i];
+//   k=k +"item-name[" +i +"].value="
+//    + a.value + " ";
 
-items : []
-}
-return input
+// items : []
+// }
+// return input
 
 
 // var min;
