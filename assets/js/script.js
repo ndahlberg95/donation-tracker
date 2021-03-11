@@ -1,27 +1,6 @@
 const input = document.getElementsByName('input')
-// for (var i = 0; i < input.length; i++) {
-//     var a = input[i];
-//     k = k + "item-name[" + i + "].value="
-//         + a.value + " ";
-
-//     items: []
-// };
 const output = document.getElementById("item-name");
 const save = document.getElementById("save");
-
-// let data = getData()
-
-// function getData() {
-
-//     //need to make dynamic based on input
-//     save.addEventListener("click", setData);
-
-
-//     output.textContent = localStorage.getItem("input")
-//     input.value = localStorage.getItem("input");
-
-//     return JSON.parse(localStorage.getItem("data"));
-// }
 
 function setData() {
     dataToStore = document.getElementById('item-name').value;
@@ -32,7 +11,7 @@ let myArray =[]
 let items = JSON.parse(localStorage.getItem('input'));
 if (items) {
     myArray = items;
-    console.log(myArray);
+    console.log(myArray)
 }
 function storeData(event) {
     event.preventDefault()
@@ -44,6 +23,13 @@ function storeData(event) {
 }
 
 save.addEventListener('click', storeData, false);
+
+let counter = 0; 
+for (const obj of myArray){
+    if (obj.input ==="0") counter++;
+}
+
+console.log(counter);
 
 
 // var min;
