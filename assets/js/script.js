@@ -9,30 +9,33 @@ for (var i = 0; i < input.length; i++) {
 const output = document.getElementById("item-name");
 const save = document.getElementById("save");
 
-let data = getData()
+// let data = getData()
 
-function getData() {
+// function getData() {
 
-    //need to make dynamic based on input
-    save.addEventListener("click", setData);
+//     //need to make dynamic based on input
+//     save.addEventListener("click", setData);
 
 
-    output.textContent = localStorage.getItem("input")
-    input.value = localStorage.getItem("input");
+//     output.textContent = localStorage.getItem("input")
+//     input.value = localStorage.getItem("input");
 
-    return JSON.parse(localStorage.getItem("data"));
-}
+//     return JSON.parse(localStorage.getItem("data"));
+// }
 
 function setData() {
     dataToStore = document.getElementById('item-name').value;
     return dataToStore;
 }
 
-
+let myArray =[]
 function storeData(event) {
     event.preventDefault()
     localStorage.setItem('input', setData());
-
+    
+    myArray.push(JSON.parse(localStorage.getItem("myArray")));
+    localStorage.setItem('input', JSON.stringify(a));
+    save.addEventListener('click', storeData, false);
 }
 
 save.addEventListener('click', storeData, false);
