@@ -1,97 +1,69 @@
-function setPerson(){
-    var person = { 'name': getElementById('name'), 'photo': getElementById('photo')};
+const input = document.getElementsByName('input')
+const output = document.getElementById("item-name");
+const save = document.getElementById("save");
+
+function setData() {
+    dataToStore = document.getElementById('item-name').value;
+    return dataToStore;
+}
+
+let myArray =[]
+let items = JSON.parse(localStorage.getItem('input'));
+if (items) {
+    myArray = items;
+    console.log(myArray)
+}
+function storeData(event) {
+    event.preventDefault()
+    localStorage.setItem('input', setData());
     
-    // Put the object into the storage
-        alert(person);
-        localStorage.setItem('person', JSON.stringify(person));
-    };
-
-console.log ("Hello World!")
-
-var data = getData()
-
-function getData(){
-
-    //need to make dynamic based on input
-    var input = document.getElementsByName('Item-name')
-    for (var i = 0; i<input.length; i++)
-    {
-        var a = input [i];
-        k=k +"item-name[" +i +"].value="
-                           + a.value + " ";
-
-        // items : [
-        //     {name: "toilet paper", amount: 2 },
-        //     {name: "tissues", amount: 8 },
-        // ]
-    }
-    return input
-
-    return JSON.parse (localStorage.getItem("data"))
+    myArray.push(document.getElementById('item-name').value);
+    localStorage.setItem('input', JSON.stringify(myArray));
+    save.addEventListener('click', storeData, false);
 }
 
-var min;
-var max;
-var sum = 0;
+save.addEventListener('click', storeData, false);
 
-for ( var i = 0; i < arr.length()-1; i++){
-    if (i==0){
-        min = arr[i]
-        max = arr[i]
-    } else {
-        if (arr[i] < min)
-            min = arr[i];
-        if (arr[i] > max)
-            max = arr[i];
-    }
-    sum = sum + arr[i];
-} 
+console.log(myArray)
 
-function setData(newData){
-    localStorage.setItem("data", JSON.stringify(newData))
- data = newData
+let counter = 0; 
+var myObject ={}
+for (let obj of myArray){ 
+   counter++
+   console.log(obj, counter)
+   if(myObject[obj]){
+    myObject[obj]=myObject[obj]+1
+   }
+   else{
+    myObject[obj]=1
+   }
+
 }
-console.log(data)
-function displayData(){
-    $("#item-1")
-    .text(data.items[0].name)
-}
+console.log(myObject)
 
 
-var min;
-var max;
-var sum = 0;
 
 
-for ( var i = 0; i < arr.length()-1; i++){
-    if (i==0){
-        min = arr[i]
-        max = arr[i]
-    } else {
-        if (arr[i] < min)
-            min = arr[i];
-            document.getElementById("min").innerHTML=("min" + "" + items.name);
-        if (arr[i] > max)
-            max = arr[i];
-            document.getElementById("max").innerHTML=("max" + "" + items.name);
-    }
-    sum = sum + arr[i];
-    document.getElementById("sum").innerHTML=("sum" + "" + items.name)
-} 
-
-displayData()
+// var min;
+// var max;
+// var sum = 0;
 
 
-// // Check browser support
-// if (typeof(Storage) !== "undefined") {
-//     // Store
-//     localStorage.setItem("item-name");
-//     localStorage.setItem("amount");
-//     localStorage.setItem("building-Name");
-//     localStorage.setItem("item-category");
-//     // Retrieve
-//     document.getElementById("result").innerHTML = localStorage.getItem();
-// } else {
-//     document.getElementById("result").innerHTML = "Donation Submitted";
-// }
+// for ( var i = 0; i < arr.length()-1; i++){
+//     if (i==0){
+//         min = arr[i]
+//         max = arr[i]
+//     } else {
+//         if (arr[i] < min)
+//             min = arr[i];
+//             document.getElementById("min").innerHTML=("min" + "" + items.name);
+//         if (arr[i] > max)
+//             max = arr[i];
+//             document.getElementById("max").innerHTML=("max" + "" + items.name);
+//     }
+//     sum = sum + arr[i];
+//     document.getElementById("sum").innerHTML=("sum" + "" + items.name)
+// } 
+
+// displayData()
 
