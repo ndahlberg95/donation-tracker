@@ -30,23 +30,6 @@ function getData(){
     return JSON.parse (localStorage.getItem("data"))
 }
 
-var min;
-var max;
-var sum = 0;
-
-for ( var i = 0; i < arr.length()-1; i++){
-    if (i==0){
-        min = arr[i]
-        max = arr[i]
-    } else {
-        if (arr[i] < min)
-            min = arr[i];
-        if (arr[i] > max)
-            max = arr[i];
-    }
-    sum = sum + arr[i];
-} 
-
 function setData(newData){
     localStorage.setItem("data", JSON.stringify(newData))
  data = newData
@@ -62,6 +45,9 @@ var min;
 var max;
 var sum = 0;
 
+function minMax(){
+
+let arr=[];
 
 for ( var i = 0; i < arr.length()-1; i++){
     if (i==0){
@@ -78,20 +64,16 @@ for ( var i = 0; i < arr.length()-1; i++){
     sum = sum + arr[i];
     document.getElementById("sum").innerHTML=("sum" + "" + items.name)
 } 
+console.log (minMax);
 
 displayData()
 
-
-// // Check browser support
-// if (typeof(Storage) !== "undefined") {
-//     // Store
-//     localStorage.setItem("item-name");
-//     localStorage.setItem("amount");
-//     localStorage.setItem("building-Name");
-//     localStorage.setItem("item-category");
-//     // Retrieve
-//     document.getElementById("result").innerHTML = localStorage.getItem();
-// } else {
-//     document.getElementById("result").innerHTML = "Donation Submitted";
-// }
-
+function MostItems() {
+    document.getElementById("MostResults").innerHTML = "1 Billion Candies Congrats";
+    
+  }
+  function MostNeeded() {
+    
+    document.getElementById("MostNeededResults").innerHTML = "We Need Toothbrushes";
+  }
+}

@@ -38,3 +38,15 @@ footer {
     width: 80%;
 }
 
+#MostItemsBtn{
+padding: 0;
+border: none;
+background: none;
+
+}
+#MostNeededBtn {
+padding: 0;
+border: none;
+background: none;
+}
+

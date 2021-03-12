@@ -36,6 +36,8 @@
   </script>
 </head>
 <header class="header">
+  <button id= "hello">Hello
+  </button>
 
   <!-- Company Name/Logo -->
 
@@ -76,8 +78,11 @@
     <div class=column>
       <div id="top-stats">
         <div id="need-most">
+          <button id ="MostNeededBtn" onclick="MostNeeded()">Click to See the Items That we Need Most</button>
+
+          <h3 id="MostNeededResults"></h3>
           <div id="min"></div>
-          <h3>MOST NEEDED ITEM</h3>
+          
         </div>
 
         <div id="total-donations">
@@ -87,7 +92,9 @@
 
         <div id="have-most">
           <div id="max"></div>
-          <h3>MOST DONATED ITEM</h3>
+          <button id ="MostItemsBtn" onclick="MostItems()">Click to See the Items we Have the Most of</button>
+
+          <h3 id="MostResults"></h3>
         </div>
       </div>
 
