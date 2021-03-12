@@ -21,7 +21,7 @@
 
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses', 'Profit'],
+        ['Items', 'Leggings', 'Shampoo', 'Shoes'],
         ['2014', 1000, 400, 200],
         ['2015', 1170, 460, 250],
         ['2016', 660, 1120, 300],
@@ -30,8 +30,8 @@
 
       var options = {
         chart: {
-          title: 'Company Performance',
-          subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          title: 'Donated Items',
+          subtitle: 'Top 4 Most Used Items',
         },
         bars: 'horizontal' // Required for Material Bar Charts.
       };
@@ -59,49 +59,48 @@
     </div>
 
     <!-- Right side -->
-    <div class="level-right" id="logo">
+    <div class="level-right">
       <div class="card-image">
         <figure class="image is-128x128">
           <img src="./assets/images/ywcautahheaderlogo.png" alt="YWCA Utah Logo">
         </figure>
+
       </div>
     </div>
 
 </header>
 
 <body>
-   
-      
     
         <!-- bar graph displaying item quantities -->
 
-  <div class=columns>
+  <div id="item-graph">
+    <h2>Item List</h2>
+    <p id="item-1"></p>
+    <!-- bar graph displaying item quantities -->
+    <div id="barchart_material" style="width: 500px; height: 500px;"></div>
+  </div>
 
-    <div class=column id="item-graph">
-      <h2>Item List</h2>
-      <p id="item-1"></p>
-      <!-- bar graph displaying item quantities -->
-      <div id="barchart_material" style="width: 500px; height: 500px;"></div>
+  <div id="top-stats">
+    <div id="need-most">
+      <div id="min"></div>
+      <h3>MOST NEEDED ITEM</h3>
     </div>
    
 
-    <div class=column>
-      <div id="top-stats">
-        <div id="need-most">
-          <div id="min"></div>
-          <h3>MOST NEEDED ITEM</h3>
-        </div>
+    <div id="total-donations">
+      <div id="sum"></div>
+      <h3>TOTAL DONATIONS</h3>
+    </div>
 
-        <div id="total-donations">
-          <div id="sum"></div>
-          <h3>TOTAL DONATIONS</h3>
-        </div>
+    <div id="have-most">
+      <div id="max"></div>
+      <h3>MOST DONATED ITEM</h3>
+    </div>
+  </div>
 
-        <div id="have-most">
-          <div id="max"></div>
-          <h3>MOST DONATED ITEM</h3>
-        </div>
-      </div>
+  <!-- Donation Input Fields -->
+ 
 
     <div id="building-buttons">
         <button>A Building</button>
@@ -213,21 +212,13 @@
       </div>
     </div>
   </div>
-
-
- 
-
+  <footer>
+    <h3>Made with Luv</h3>
+    <p>Copyright 2021 by Chinchillas</p>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
-</body>
-
-    <div>
-        <footer id="footer">
-        <h3>Made with Luv</h3>
-        <p>Copyright 2021 by Chinchillas</p>
-        </footer>
-    </div>
 
 </body>
 </html>
