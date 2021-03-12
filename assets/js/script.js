@@ -1,6 +1,9 @@
 const input = document.getElementsByName('input')
 const output = document.getElementById("item-name");
 const save = document.getElementById("save");
+let sum = 0;
+let min;
+let max;
 
 function setData() {
     dataToStore = document.getElementById('item-name').value;
