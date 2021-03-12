@@ -46,19 +46,19 @@ form {
     width: 550px;
     color: #024E76;
     margin: 0%;
-  }
+}
 
-  form h3 {
+form h3 {
     font-size: 24px;
     margin: 0;
     color: black;
     font-style: sans-serif;
-  }
+}
 
-  form p {
+form p {
     margin: 5px 0 15px 0;
     color: black;
-  }
+}
 
 form-input {
     border: 1px solid #024E76;
