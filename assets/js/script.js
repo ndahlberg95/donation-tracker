@@ -21,6 +21,9 @@ function storeData(event) {
     localStorage.setItem('input', JSON.stringify(myArray));
     save.addEventListener('click', storeData, false);
 }
+console.log(myObject)
+
+
 
 save.addEventListener('click', storeData, false);
 
@@ -40,9 +43,6 @@ for (let obj of myArray){
 
 }
 console.log(myObject)
-
-
-
 
 // var min;
 // var max;
@@ -67,6 +67,27 @@ function validate() {
 }
 
 displayData()
+
+// for ( var i = 0; i < arr.length()-1; i++){
+//     if (i==0){
+//         min = arr[i]
+//         max = arr[i]
+//     } else {
+//         if (arr[i] < min)
+//             min = arr[i];
+//             document.getElementById("min").innerHTML=("min" + "" + items.name);
+//         if (arr[i] > max)
+//             max = arr[i];
+//             document.getElementById("max").innerHTML=("max" + "" + items.name);
+//     }
+//     sum = sum + arr[i];
+//     document.getElementById("sum").innerHTML=("sum" + "" + items.name)
+// } 
+
+// var min;
+// var max;
+// var sum = 0;
+
 
 // for ( var i = 0; i < arr.length()-1; i++){
 //     if (i==0){

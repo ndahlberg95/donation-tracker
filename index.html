@@ -99,85 +99,57 @@
     </div>
   </div>
 
-  <!-- Donation Input Fields -->
- 
-
-    <div id="building-buttons">
-        <button>A Building</button>
-        <button>B Building</button>
-        <button>KRH</button>
-        <button>GJ</button>
-    </div>
-    
     <!-- Donation Input Fields -->
- <div id="donation-input" class="form">
+ <div id="donation-input">
      <form onsubmit="return validate()"  action="message.html">
         <div id="donation-input">
         <!-- Item Name (Text Field)-->
         <div class="field">
             <label class="label"><h3>Item Name</h3></label>
             <div class="form-control">
-              <input class="input" class="input[type=text]" id="itemName" type="text" placeholder="e.g Toothpaste" required>
-              <div class="level-left" id="logo">
-                <div class="card-image">
-                  <figure class="image is-200x200">
-                    <img src="./assets/images/formpic.png" alt="YWCA Form Logo">
-                  </figure>
-                </div>
-              </div>
+              <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
             </div>
           </div>
           
-      <!-- <div id="building-buttons">
-            <button>A Building</button>
-            <button>B Building</button>
-            <button>KRH</button>
-            <button>GJ</button>
-        </div> -->
+<!-- Item Category (Drop Down Menu)-->
+    <!-- <div class="control">
+     <div class="select">
+      <select>
+        <option>Item Category</option>
+        <option> Option 1</option>
+        <option> Option 2</option>
+        <option> Option 3</option>
+        <option> Option 4</option>
+        <option> Option 5</option>
+        <option> Option 6</option>
+        <option> Option 7</option>
+        <option> Option 8</option>
+        <option> Option 9</option>
+      </select> -->
+   
 
-      <!-- Donation Input Fields -->
-    
-
-            <!-- Item Category (Drop Down Menu)-->
-            <div class="control">
-              <div class="select">
+         <!-- <div class="field">
+            <label class="label"><h3>Amount</h3></label>
+        <! Value (Text Field)-->
+        <!--div class="field has-addons has-addons-right">
+            <p class="control">
+              <span class="select">
                 <select>
-                  <option>Item Category</option>
-                  <option> Option 1</option>
-                  <option> Option 2</option>
-                  <option> Option 3</option>
-                  <option> Option 4</option>
-                  <option> Option 5</option>
-                  <option> Option 6</option>
-                  <option> Option 7</option>
-                  <option> Option 8</option>
-                  <option> Option 9</option>
+                  <option>$</option>
                 </select>
               </span>
             </p>
-          </div>
+            <p class="control">
+              <input class="input" id="Value" type="text" placeholder="Amount of money" required>
+            </p>
+            <p class="control">
+              <a class="button is-primary">
+              </a>
+            </p>
+          </div> -->
         <!--GIF Displayed-->
-      
-      
+      <!--local storage save-->
       <div id="result"></div>
-      <p class="control">
-      </p>
-      <div class="field">
-        
-        <!-- Value (Text Field)-->
-        <div class="field has-addons has-addons-right">
-          <p class="control">
-            <span class="select">
-              <select>
-                <option>$</option>
-              </select>
-            </span>
-          </p>
-          <p class="control">
-            <input class="input" id="amount" type="text" placeholder="Value">
-          </p>
-        
-        </div>
             <button type="submit">
               Submit Donation
             </button>
@@ -185,40 +157,8 @@
     </div>
 </div>
 
-<script>
-    // Check browser support
-    if (typeof(Storage) !== "undefined") {
-      // Store
-      localStorage.setItem("Item-name");
-      localStorage.setItem("Amount");
-      localStorage.setItem("Building-Name");
-      localStorage.setItem("Item-category");
-      // Retrieve
-      document.getElementById("result").innerHTML = localStorage.getItem();
-    } else {
-      document.getElementById("result").innerHTML = "Donation Submitted";
-    }
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-              </div>
-              <!--GIF Displayed-->
-              <!--local storage save-->
-              <div id="result"></div>
-
-              
-        </form>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <h3>Made with Luv</h3>
-    <p>Copyright 2021 by Chinchillas</p>
-  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
-
 </body>
 </html>
