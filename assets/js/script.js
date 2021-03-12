@@ -1,33 +1,44 @@
 const input = document.getElementsByName('input')
 const output = document.getElementById("item-name");
 const save = document.getElementById("save");
+let sum = 0;
+let min;
+let max;
 
 function setData() {
     dataToStore = document.getElementById('item-name').value;
     return dataToStore;
-}
+};
 
-let myArray =[]
-let items = JSON.parse(localStorage.getItem('input'));
+let myArray = JSON.parse(localStorage.getItem('input')) || [];
+/*let items = JSON.parse(localStorage.getItem('input'));
 if (items) {
     myArray = items;
     console.log(myArray)
-}
+};*/
+
 function storeData(event) {
     event.preventDefault()
-    localStorage.setItem('input', setData());
-    
+    //localStorage.setItem('input', setData());
+
+    myArray = JSON.parse(localStorage.getItem('input')) || [];
+    console.log("myArray: "+myArray);
+    let itemName = document.getElementById('item-name').value;
+    console.log("Item name: "+itemName);
     myArray.push(document.getElementById('item-name').value);
+    document.getElementById('item-name').value = "";
     localStorage.setItem('input', JSON.stringify(myArray));
-    save.addEventListener('click', storeData, false);
+
+    //findMinMaxSum(myArray)
+    //save.addEventListener('click', storeData, false);
 }
 
 save.addEventListener('click', storeData, false);
 
-console.log(myArray)
+//console.log(myArray)
 
 let counter = 0; 
-var myObject ={}
+let myObject ={}
 for (let obj of myArray){ 
    counter++
    console.log(obj, counter)
@@ -38,32 +49,54 @@ for (let obj of myArray){
     myObject[obj]=1
    }
 
+//    findMinMaxSum(myObject)
 }
 console.log(myObject)
 
+function maxObject(myArray){
+    if (myArray.length ===0)
+        return null;
+    let myObject = {};
+    let maxEl = myArray[0], maxCount = 1; 
+    for (var i = 0; i < myArray.length; i++)
+    {
+        let el = myArray [i];
+        if(myObject [el]===null)
+            myObject [el] = 1;
+            else
+            myObject [el]++;
+            if(myObject[el] > maxCount)
+            {
+                maxEl = el;
+                maxCount = myObject [el];
+            }
 
+    }
 
+    console.log(maxEl);
 
-// var min;
-// var max;
-// var sum = 0;
+     
+}
 
-
-// for ( var i = 0; i < arr.length()-1; i++){
+// function findMinMaxSum(myArray) {
+//     console.log(myArray);
+// for ( let i = 0; i < myObject.length; i++) {
 //     if (i==0){
-//         min = arr[i]
-//         max = arr[i]
+//         min = myObject[i]
+//         max = myObject[i]
 //     } else {
-//         if (arr[i] < min)
-//             min = arr[i];
-//             document.getElementById("min").innerHTML=("min" + "" + items.name);
-//         if (arr[i] > max)
-//             max = arr[i];
-//             document.getElementById("max").innerHTML=("max" + "" + items.name);
+//         if (myObject[i] < min)
+//             min = myObject[i];
+//             document.getElementById("min").innerHTML=("min" + "" + input);
+//         if (myObject[i] > max)
+//             max = myObject[i];
+//             document.getElementById("max").innerHTML=("max" + "" + input);
 //     }
-//     sum = sum + arr[i];
-//     document.getElementById("sum").innerHTML=("sum" + "" + items.name)
+//     sum = sum + myObject[i];
+//     document.getElementById("sum").innerHTML=("sum" + "" + input)
 // } 
 
-// displayData()
+//displayData()
+// }
+
 
