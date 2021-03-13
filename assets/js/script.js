@@ -22,9 +22,9 @@ function storeData(event) {
     //localStorage.setItem('input', setData());
 
     myArray = JSON.parse(localStorage.getItem('input')) || [];
-    console.log("myArray: "+myArray);
+    console.log("myArray: "+ myArray);
     let itemName = document.getElementById('item-name').value;
-    console.log("Item name: "+itemName);
+    console.log("Item name: "+ itemName);
     myArray.push(document.getElementById('item-name').value);
     document.getElementById('item-name').value = "";
     localStorage.setItem('input', JSON.stringify(myArray));
@@ -34,8 +34,6 @@ function storeData(event) {
 }
 
 save.addEventListener('click', storeData, false);
-
-//console.log(myArray)
 
 let counter = 0; 
 let myObject ={}
@@ -53,50 +51,13 @@ for (let obj of myArray){
 }
 console.log(myObject)
 
-function maxObject(myArray){
-    if (myArray.length ===0)
-        return null;
-    let myObject = {};
-    let maxEl = myArray[0], maxCount = 1; 
-    for (var i = 0; i < myArray.length; i++)
-    {
-        let el = myArray [i];
-        if(myObject [el]===null)
-            myObject [el] = 1;
-            else
-            myObject [el]++;
-            if(myObject[el] > maxCount)
-            {
-                maxEl = el;
-                maxCount = myObject [el];
-            }
-
-    }
-
-    console.log(maxEl);
-
-     
+function findMinMaxSum(myArray){
+    Math.max (...myArray);
+    document.getElementById("max").innerHTML=(max);
+    Math.min (...myArray);
+    document.getElementById("min").innerHTML=(min);
+    Math.sum (...myArray);
+    document.getElementById("sum").innerHTML=(sum);
 }
 
-// function findMinMaxSum(myArray) {
-//     console.log(myArray);
-// for ( let i = 0; i < myObject.length; i++) {
-//     if (i==0){
-//         min = myObject[i]
-//         max = myObject[i]
-//     } else {
-//         if (myObject[i] < min)
-//             min = myObject[i];
-//             document.getElementById("min").innerHTML=("min" + "" + input);
-//         if (myObject[i] > max)
-//             max = myObject[i];
-//             document.getElementById("max").innerHTML=("max" + "" + input);
-//     }
-//     sum = sum + myObject[i];
-//     document.getElementById("sum").innerHTML=("sum" + "" + input)
-// } 
-
-//displayData()
-// }
-
-
+console.log(myArray)
