@@ -80,7 +80,7 @@ function maxObject(myArray){
 
 // function findMinMaxSum(myArray) {
 //     console.log(myArray);
-// for ( let i = 0; i < myObject.length; i++) {
+// for (let i = 0; i < myObject.length; i++) {
 //     if (i==0){
 //         min = myObject[i]
 //         max = myObject[i]
@@ -95,6 +95,11 @@ function maxObject(myArray){
 //     sum = sum + myObject[i];
 //     document.getElementById("sum").innerHTML=("sum" + "" + input)
 // } 
+
+function findSum (myArray) {
+    sum = sum + myObject[i];
+    document.getElementById("sum").innerHTML=("sum" + "" + input)
+}
 
 //displayData()
 // }
