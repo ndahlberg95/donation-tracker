@@ -22,11 +22,8 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ['Items', 'Leggings', 'Shampoo', 'Shoes'],
-        ['2014', 1000, 400, 200],
-        ['2015', 1170, 460, 250],
-        ['2016', 660, 1120, 300],
-        ['2017', 1030, 540, 350]
-      ]);
+        ['Weekly', 30, 10, 50],
+        ]);
 
       var options = {
         chart: {
@@ -74,33 +71,24 @@
     
         <!-- bar graph displaying item quantities -->
 
-  <div id="item-graph">
-    <h2>Item List</h2>
-    <p id="item-1"></p>
-    <!-- bar graph displaying item quantities -->
-    <div id="barchart_material" style="width: 500px; height: 500px;"></div>
-  </div>
-
-  <div id="top-stats">
-    <div id="need-most">
-      <div id="min"></div>
-      <h3>MOST NEEDED ITEM</h3>
+ <div class=columns>
+   
+    <div class=column id="item-graph">
+      <h2>Item List</h2>
+      <p id="item-1"></p>
+      <!-- bar graph displaying item quantities -->
+      <div id="barchart_material" style="width: 500px; height: 500px;"></div>
     </div>
    
 
-    <div id="total-donations">
-      <div id="sum"></div>
-      <h3>TOTAL DONATIONS</h3>
-    </div>
-
-    <div id="have-most">
-      <div id="max"></div>
-      <h3>MOST DONATED ITEM</h3>
-    </div>
-  </div>
-
+    <div class=column>
+      <div id="top-stats">
+      
+          <h3>MOST NEEDED ITEM</h3> </br/> 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <h3>TOTAL DONATIONS</h3> &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <h3>MOST DONATED ITEM</h3>
+        </div>
+    
     <!-- Donation Input Fields -->
- <div id="donation-input">
+ <div id="donation-input" class="column is-centered">
      <form onsubmit="return validate()"  action="message.html">
         <div id="donation-input">
         <!-- Item Name (Text Field)-->
@@ -156,9 +144,54 @@
      </form>
     </div>
 </div>
+  
+      </div>
+
+      <!-- Donation Input Fields -->
+      <!-- <div>
+        <form>
+          <div id="donation-input">
+             Item Name (Text Field)-->
+            <!-- <div class="field">
+              <label class="label">
+                <h3>Item Name</h3>
+              </label>
+              <div class="control">
+                <input class="input" id="item-name" type="text" placeholder="e.g Toothpaste">
+              </div>
+            </div> --> 
+
+            <!-- Item Category (Drop Down Menu)-->
+
+<!-- 
+            <div class="field"> -->
+               <!-- Value (Text Field)-->
+              <!-- <div class="field has-addons has-addons-right">
+
+
+              </div> -->
+              <!--GIF Displayed-->
+              <!--local storage save-->
+              <!-- <div id="result"></div>
+
+
+
+              <button id="save" type="submit">
+                Submit Donation
+              </button>
+
+            </div> -->
+          </div>
+        </form>
+      </div>
+     </div>
+  </div>
+ </div>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

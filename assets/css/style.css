@@ -43,6 +43,7 @@ form {
     width: 550px;
     color: #024e76;
     margin: 0%;
+    align-items: left;
   }
   
   form h3 {
@@ -78,7 +79,7 @@ form {
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    resize: none;
+    resize: non;
 }
   
 input {
