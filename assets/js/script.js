@@ -1,9 +1,8 @@
 const input = document.getElementsByName('input')
 const output = document.getElementById("item-name");
 const save = document.getElementById("save");
-let sum = 0;
-let min;
-let max;
+let myObject = {};
+
 
 function setData() {
     dataToStore = document.getElementById('item-name').value;
@@ -22,61 +21,34 @@ function storeData(event) {
     //localStorage.setItem('input', setData());
 
     myArray = JSON.parse(localStorage.getItem('input')) || [];
-    console.log("myArray: "+myArray);
+    console.log("myArray: " + myArray);
     let itemName = document.getElementById('item-name').value;
-    console.log("Item name: "+itemName);
+    console.log("Item name: " + itemName);
     myArray.push(document.getElementById('item-name').value);
     document.getElementById('item-name').value = "";
     localStorage.setItem('input', JSON.stringify(myArray));
-
-    //findMinMaxSum(myArray)
-    //save.addEventListener('click', storeData, false);
+    defineMyObject();
+    findMin();
+    findSum();
 }
 
 save.addEventListener('click', storeData, false);
 
-//console.log(myArray)
-
-let counter = 0; 
-let myObject ={}
-for (let obj of myArray){ 
-   counter++
-   console.log(obj, counter)
-   if(myObject[obj]){
-    myObject[obj]=myObject[obj]+1
-   }
-   else{
-    myObject[obj]=1
-   }
-
-//    findMinMaxSum(myObject)
-}
-console.log(myObject)
-
-function maxObject(myArray){
-    if (myArray.length ===0)
-        return null;
-    let myObject = {};
-    let maxEl = myArray[0], maxCount = 1; 
-    for (var i = 0; i < myArray.length; i++)
-    {
-        let el = myArray [i];
-        if(myObject [el]===null)
-            myObject [el] = 1;
-            else
-            myObject [el]++;
-            if(myObject[el] > maxCount)
-            {
-                maxEl = el;
-                maxCount = myObject [el];
-            }
-
+function defineMyObject(){
+    let counter = 0;
+    for (let obj of myArray) {
+        counter++
+        console.log(obj, counter)
+        if (myObject[obj]) {
+            myObject[obj] = myObject[obj] + 1
+        }
+        else {
+            myObject[obj] = 1
+        }
     }
-
-    console.log(maxEl);
-
-     
 }
+
+defineMyObject()
 
 // function findMinMaxSum(myArray) {
 //     console.log(myArray);
@@ -96,10 +68,45 @@ function maxObject(myArray){
 //     document.getElementById("sum").innerHTML=("sum" + "" + input)
 // } 
 
-function findSum (myArray) {
-    sum = sum + myObject[i];
-    document.getElementById("sum").innerHTML=("sum" + "" + input)
+
+
+
+// findMin identifies and displays the item with the least amount of donations
+function findMin(){
+    let min = Number.MAX_SAFE_INTEGER;
+    console.log ("findMin is running")
+    var minItem = "";
+    for (const itemName in myObject) {
+        console.log (myObject[itemName]);
+        if (myObject[itemName] < min){
+            min = myObject[itemName];
+            minItem = itemName;
+        }
+    }
+    console.log ("This is the min:", min)
+    document.getElementById("min").innerHTML=minItem
 }
+
+// findSum adds and displays the totaly number of donations
+function findSum(){
+    let sum = 0;
+    console.log ("findSum is running")
+    // sum = sum + sum of the values of each item in myArray
+    console.log (myObject)
+    for (const itemName in myObject) {
+        console.log (myObject[itemName])
+        sum = sum + myObject[itemName]
+    }
+    console.log (sum)
+    document.getElementById("sum").innerHTML=sum
+}
+
+function findMax(){
+    let max;
+}
+
+findMin()
+findSum()
 
 //displayData()
 // }
