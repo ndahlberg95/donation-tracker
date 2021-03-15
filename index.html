@@ -89,7 +89,7 @@
     
     <!-- Donation Input Fields -->
  <div id="donation-input" class="column is-centered">
-     <form onsubmit="return validate()">
+     <form onsubmit="event.preventDefault(); validate();">
         <div id="donation-input">
         <!-- Item Name (Text Field)-->
         <div class="field">
@@ -101,7 +101,7 @@
 
         
 <!---Item Category (Drop Down Menu)-->
-    <div class="control">
+    <!--div class="control">
      <div class="select">
       <select>
         <div class="select"></div>
@@ -118,10 +118,10 @@
       </select> 
    
 
-         <div class="field">
+         <!-div class="field">
             <label class="label"><h3>Amount</h3></label>
-        <!-- Value (Text Field)-->
-        <div class="field has-addons has-addons-right">
+        <!-Value (Text Field)-->
+        <!--div class="field has-addons has-addons-right">
             <p class="control">
               <span class="select">
                 <select>
@@ -134,19 +134,17 @@
             </p>
           </div> 
 
-      <!--local storage save-->
+      <!-local storage save-->
       <div id="result"></div>
             <button type="submit">
               Submit Donation
-            </button>
-
-             <!--GIF Displayed-->
-             <button onclick="myFunction()">Click Me After Submisson</button>
-             <div id="myDIV">
-               <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM">via GIPHY</a></p>
-             </div>
-                 </div>
      </form>
+     </button>
+      <!--GIF Displayed-->
+       <div id="myDIV" class="myDIV">
+         <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM">via GIPHY</a></p>
+       </div>
+           </div>
     </div>
 
 

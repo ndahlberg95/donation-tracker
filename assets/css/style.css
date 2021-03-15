@@ -34,6 +34,10 @@ footer {
     padding: 100px;
 }
 
+.myDIV {
+  display: none;
+}
+
 
 form {
     display: flex;
@@ -44,7 +48,7 @@ form {
     color: #024e76;
     margin: 0%;
     align-items: left;
-    height: 350px;
+    height: 200px;
   }
   
   form h3 {
@@ -65,7 +69,7 @@ form {
     font-size: 16px;
     color: #024e76;
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     border-radius: 10px;
     box-sizing: content-box;
   }
@@ -95,7 +99,7 @@ input {
     color: white;
     background-color: #FA4616; 
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-size: 16px;
     border-radius: 10px;
   }
@@ -117,5 +121,11 @@ input {
   justify-content: space-between;
   margin: 2em;
   font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
