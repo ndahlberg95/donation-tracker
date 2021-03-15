@@ -101,11 +101,11 @@ findSum()
 findMax()
 
 // Form Code
-function validate() {
-    myFunction()
-    var itemName = document.getElementById ("itemName");
-    var value = document.getElementById ("Value");
-}
+// function validate() {
+//     myFunction()
+//     var itemName = document.getElementById ("itemName");
+//     var value = document.getElementById ("Value");
+// }
 
 function myFunction() {
     var x = document.getElementById("myDIV");
