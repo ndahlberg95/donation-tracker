@@ -48,7 +48,7 @@
     <!-- Left side -->
     <div class="level-left">
       <div class="level-item">
-        <h2 class="title is-2">Donation Tracker
+        <h2 class="title is-2 has-text-white">Donation Tracker
         </h2>
       </div>
       <div class="level-item">
@@ -59,7 +59,7 @@
     <div class="level-right">
       <div class="card-image">
         <figure class="image is-128x128">
-          <img src="./assets/images/ywcautahheaderlogo.png" alt="YWCA Utah Logo">
+          <img src="./assets/images/logo-white.png" alt="YWCA Utah Logo">
         </figure>
 
       </div>
@@ -86,18 +86,6 @@
       
           <h3>MOST NEEDED ITEM</h3> </br/> 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <h3>TOTAL DONATIONS</h3> &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <h3>MOST DONATED ITEM</h3>
         </div>
-    
-    <!-- Donation Input Fields -->
- <div id="donation-input" class="column is-centered">
-     <form onsubmit="event.preventDefault(); validate();">
-        <div id="donation-input">
-        <!-- Item Name (Text Field)-->
-        <div class="field">
-            <label class="label"><h3>Item Name</h3></label>
-            <div class="form-control">
-              <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
-            </div>
-          </div>
 
         
 <!---Item Category (Drop Down Menu)-->
@@ -134,18 +122,63 @@
             </p>
           </div> 
 
-      <!-local storage save-->
-      <div id="result"></div>
+    <div class=column>
+      <div id="top-stats">
+        <div id="need-most">
+          <div id="min"></div>
+          <h3>MOST NEEDED ITEM</h3>
+        </div>
+
+        <div id="total-donations">
+          <div id="sum"></div>
+          <h3>TOTAL DONATIONS</h3>
+        </div>
+
+        <div id="have-most">
+          <div id="max"></div>
+          <h3>MOST DONATED ITEM</h3>
+        </div>
+      </div>
+
+          <!- Donation Input Fields -->
+ <div id="donation-input" class="column is-centered">
+  <form onsubmit="event.preventDefault(); validate();">
+     <div id="donation-input">
+     <!-- Item Name (Text Field)-->
+     <div class="field">
+         <label class="label"><h3>Item Name</h3></label>
+         <div class="form-control">
+           <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
+         </div>
+       </div>
+
+            <!-- Item Category (Drop Down Menu)-->
+
+
+            <div class="field">
+               <!-- Value (Text Field)-->
+              <div class="field has-addons has-addons-right">
+              </div>
+             
+
+
+
+              <div id="result"></div>
             <button type="submit">
               Submit Donation
      </form>
      </button>
-      <!--GIF Displayed-->
-       <div id="myDIV" class="myDIV">
-         <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM">via GIPHY</a></p>
-       </div>
-           </div>
+     <div id="myDIV" class="myDIV">
+      <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM">via GIPHY</a></p>
     </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+     </div>
+  </div>
+ </div>
 
 
 
