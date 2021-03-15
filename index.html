@@ -89,7 +89,7 @@
     
     <!-- Donation Input Fields -->
  <div id="donation-input" class="column is-centered">
-     <form onsubmit="return validate()"  action="message.html">
+     <form onsubmit="return validate()">
         <div id="donation-input">
         <!-- Item Name (Text Field)-->
         <div class="field">
@@ -98,11 +98,13 @@
               <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
             </div>
           </div>
-          
-<!-- Item Category (Drop Down Menu)-->
-    <!-- <div class="control">
+
+        
+<!---Item Category (Drop Down Menu)-->
+    <div class="control">
      <div class="select">
       <select>
+        <div class="select"></div>
         <option>Item Category</option>
         <option> Option 1</option>
         <option> Option 2</option>
@@ -113,13 +115,13 @@
         <option> Option 7</option>
         <option> Option 8</option>
         <option> Option 9</option>
-      </select> -->
+      </select> 
    
 
-         <!-- <div class="field">
+         <div class="field">
             <label class="label"><h3>Amount</h3></label>
-        <! Value (Text Field)-->
-        <!--div class="field has-addons has-addons-right">
+        <!-- Value (Text Field)-->
+        <div class="field has-addons has-addons-right">
             <p class="control">
               <span class="select">
                 <select>
@@ -130,63 +132,22 @@
             <p class="control">
               <input class="input" id="Value" type="text" placeholder="Amount of money" required>
             </p>
-            <p class="control">
-              <a class="button is-primary">
-              </a>
-            </p>
-          </div> -->
-        <!--GIF Displayed-->
+          </div> 
+
       <!--local storage save-->
       <div id="result"></div>
             <button type="submit">
               Submit Donation
             </button>
+
+             <!--GIF Displayed-->
+             <button onclick="myFunction()">Click Me After Submisson</button>
+             <div id="myDIV">
+               <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM">via GIPHY</a></p>
+             </div>
+                 </div>
      </form>
     </div>
-</div>
-  
-      </div>
-
-      <!-- Donation Input Fields -->
-      <!-- <div>
-        <form>
-          <div id="donation-input">
-             Item Name (Text Field)-->
-            <!-- <div class="field">
-              <label class="label">
-                <h3>Item Name</h3>
-              </label>
-              <div class="control">
-                <input class="input" id="item-name" type="text" placeholder="e.g Toothpaste">
-              </div>
-            </div> --> 
-
-            <!-- Item Category (Drop Down Menu)-->
-
-<!-- 
-            <div class="field"> -->
-               <!-- Value (Text Field)-->
-              <!-- <div class="field has-addons has-addons-right">
-
-
-              </div> -->
-              <!--GIF Displayed-->
-              <!--local storage save-->
-              <!-- <div id="result"></div>
-
-
-
-              <button id="save" type="submit">
-                Submit Donation
-              </button>
-
-            </div> -->
-          </div>
-        </form>
-      </div>
-     </div>
-  </div>
- </div>
 
 
 
