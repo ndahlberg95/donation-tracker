@@ -4,12 +4,6 @@ const save = document.getElementById("save");
 let myObject = {};
 
 
-
-// Form Code
-function validate() {
-    myFunction()
-    var itemName = document.getElementById ("itemName");
-    var Value = document.getElementById ("Value");
 function setData() {
     dataToStore = document.getElementById('item-name').value;
     return dataToStore;
@@ -39,27 +33,8 @@ function storeData(event) {
     findMax();
 }
 
-    if(itemName.value.trim() == "" ||Value.value.trim()=="")
+save.addEventListener('click', storeData, false);
 
-    {
-        alert("No Blank Values Allowed");
-        return false;
-    }
-    else {
-        true;
-
-    }
-}
-
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      
-    } else {
-      x.style.display = "none";
-    }
-  }
 function defineMyObject(){
     let counter = 0;
     for (let obj of myArray) {
@@ -124,3 +99,20 @@ function findMax(){
 findMin()
 findSum()
 findMax()
+
+// Form Code
+function validate() {
+    myFunction()
+    var itemName = document.getElementById ("itemName");
+    var value = document.getElementById ("Value");
+}
+
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      
+    } else {
+      x.style.display = "none";
+    }
+} 
