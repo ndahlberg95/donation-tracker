@@ -15,13 +15,13 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ['Items', 'Leggings', 'Shampoo', 'Shoes'],
-        ['Weekly', 30, 10, 50],
+        ['Yearly', 524, 627, 485],
       ]);
 
       var options = {
         chart: {
-          title: 'Donated Items',
-          subtitle: 'Top 4 Most Used Items',
+          title: "Last Year's Donated Items",
+          subtitle: 'Top 3 Items',
         },
         bars: 'horizontal' // Required for Material Bar Charts.
       };
