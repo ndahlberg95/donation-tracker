@@ -100,19 +100,19 @@ findMin()
 findSum()
 findMax()
 
-// Form Code
-// function validate() {
-//     myFunction()
-//     var itemName = document.getElementById ("itemName");
-//     var value = document.getElementById ("Value");
-// }
 
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      
-    } else {
-      x.style.display = "none";
-    }
-} 
+var todayDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+      $("#currentDay").html(todayDate);
+var currentDay = null,
+      date = null;
+
+var update = function () {
+  date = moment(new Date())
+  currentDay.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+};
+
+$(document).ready(function(){
+  currentDay = $('#currentDay')
+  update();
+  setInterval(update, 1000);
+});
