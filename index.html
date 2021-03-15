@@ -2,11 +2,18 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Tracker Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <!-- Link for bulma style sheet -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation Tracker Project</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
     google.charts.load('current', { 'packages': ['bar'] });
@@ -61,6 +68,8 @@
 </header>
 
 <body>
+    
+        <!-- bar graph displaying item quantities -->
 
  <div class=columns>
    
@@ -70,6 +79,48 @@
       <!-- bar graph displaying item quantities -->
       <div id="barchart_material" style="width: 500px; height: 500px;"></div>
     </div>
+   
+
+    <div class=column>
+      <div id="top-stats">
+      
+          <h3>MOST NEEDED ITEM</h3> </br/> 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <h3>TOTAL DONATIONS</h3> &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp; <h3>MOST DONATED ITEM</h3>
+        </div>
+
+        
+<!---Item Category (Drop Down Menu)-->
+    <!--div class="control">
+     <div class="select">
+      <select>
+        <div class="select"></div>
+        <option>Item Category</option>
+        <option> Option 1</option>
+        <option> Option 2</option>
+        <option> Option 3</option>
+        <option> Option 4</option>
+        <option> Option 5</option>
+        <option> Option 6</option>
+        <option> Option 7</option>
+        <option> Option 8</option>
+        <option> Option 9</option>
+      </select> 
+   
+
+         <!-div class="field">
+            <label class="label"><h3>Amount</h3></label>
+        <!-Value (Text Field)-->
+        <!--div class="field has-addons has-addons-right">
+            <p class="control">
+              <span class="select">
+                <select>
+                  <option>$</option>
+                </select>
+              </span>
+            </p>
+            <p class="control">
+              <input class="input" id="Value" type="text" placeholder="Amount of money" required>
+            </p>
+          </div> 
 
     <div class=column>
       <div id="top-stats">
@@ -89,19 +140,17 @@
         </div>
       </div>
 
-      <!-- Donation Input Fields -->
-      <div>
-        <form>
-          <div id="donation-input">
-            <!-- Item Name (Text Field)-->
-            <div class="field">
-              <label class="label">
-                <h3>Item Name</h3>
-              </label>
-              <div class="control">
-                <input class="input" id="item-name" type="text" placeholder="e.g Toothpaste">
-              </div>
-            </div>
+          <!- Donation Input Fields -->
+ <div id="donation-input" class="column is-centered">
+  <form onsubmit="event.preventDefault(); validate();">
+     <div id="donation-input">
+     <!-- Item Name (Text Field)-->
+     <div class="field">
+         <label class="label"><h3>Item Name</h3></label>
+         <div class="form-control">
+           <input class="input" id="itemName" type="text" placeholder="e.g Toothpaste" required>
+         </div>
+       </div>
 
             <!-- Item Category (Drop Down Menu)-->
 
@@ -109,18 +158,19 @@
             <div class="field">
                <!-- Value (Text Field)-->
               <div class="field has-addons has-addons-right">
-
-
               </div>
-              <!--GIF Displayed-->
-              <!--local storage save-->
+             
+
+
+
               <div id="result"></div>
-
-
-
-              <button id="save" type="submit">
-                Submit Donation
-              </button>
+            <button type="submit">
+              Submit Donation
+     </form>
+     </button>
+     <div id="myDIV" class="myDIV">
+      <iframe src="https://giphy.com/embed/l0MYt5jPR6QX5pnqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM">via GIPHY</a></p>
+    </div>
 
             </div>
           </div>
@@ -131,10 +181,6 @@
  </div>
 
 
-  <footer>
-    <h3>Made with Luv</h3>
-    <p>Copyright 2021 by Chinchillas</p>
-  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
