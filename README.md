@@ -1,0 +1,1 @@
+We will be building a donations tracker for Graciana’s non-profit that will keep track of physical donations such as home goods, feminine products, etc.   It will allow team members to pick the product-type and quantity and save to storage.  We may also include the date the donation was made and who it is from.

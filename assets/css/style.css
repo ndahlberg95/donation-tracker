@@ -1,0 +1,122 @@
+header {
+    padding: 10px;
+    background-color: #FA4616;
+}
+
+footer {
+    padding: 100px;
+    text-align: center;
+}
+
+#logo {
+    padding: 30px;
+}
+
+#item-graph {
+    padding: 30px;
+}
+
+#top-stats {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 50px;
+}
+
+#need-most {
+    padding: 100px;
+}
+
+#total-donations {
+    padding: 100px;
+}
+
+#have-most {
+    padding: 100px;
+}
+
+#donation-input {
+    width: 80%;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid black;
+    background-color: #CCCCCC;
+    width: 550px;
+    color: #024E76;
+    margin: 0%;
+}
+
+form h3 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
+    font-style: sans-serif;
+}
+
+form p {
+    margin: 5px 0 15px 0;
+    color: black;
+}
+
+form-input {
+    border: 1px solid #024E76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024E76;
+    width: 100%;
+    margin-bottom: 150px;
+    border-radius: 10px;
+}
+
+.input, .textarea  {
+    box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #F8F8F8;
+    resize: none;
+}
+
+input {
+  width: 80%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+form button {
+    color: white;
+    background-color: #FA4616;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.button.is-primary {
+    background-color: #00D1B2;
+    border-color: transparent;
+    color: #fff;
+}
+
+#donation-input {
+  background-color: #CCCCCC;
+  width: 550px;
+  margin: 1.5%;
+  color: #024E76;
+  border-radius: auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
