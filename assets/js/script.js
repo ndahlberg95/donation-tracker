@@ -124,3 +124,23 @@ function findMax(){
 findMin()
 findSum()
 findMax()
+
+
+// Date and Time 
+
+
+// var todayDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+//       $("#currentDay").html(todayDate);
+// var currentDay = null,
+//       date = null;
+
+// var update = function () {
+//   date = moment(new Date())
+//   currentDay.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+// };
+
+// $(document).ready(function(){
+//   currentDay = $('#currentDay')
+//   update();
+//   setInterval(update, 1000);
+// });
