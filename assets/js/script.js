@@ -4,29 +4,16 @@ const save = document.getElementById("save");
 let myObject = {};
 
 
-
-// Form Code
-function validate() {
-    myFunction()
-    var itemName = document.getElementById ("itemName");
-    var Value = document.getElementById ("Value");
 function setData() {
     dataToStore = document.getElementById('item-name').value;
     return dataToStore;
 };
 
 let myArray = JSON.parse(localStorage.getItem('input')) || [];
-/*let items = JSON.parse(localStorage.getItem('input'));
-if (items) {
-    myArray = items;
-    console.log(myArray)
-};*/
 
 function storeData(event) {
     event.preventDefault()
-    //localStorage.setItem('input', setData());
-
-    // myArray = JSON.parse(localStorage.getItem('input')) || [];
+ 
     console.log("myArray: " + myArray);
     let itemName = document.getElementById('item-name').value;
     console.log("Item name: " + itemName);
@@ -39,27 +26,8 @@ function storeData(event) {
     findMax();
 }
 
-    if(itemName.value.trim() == "" ||Value.value.trim()=="")
+save.addEventListener('click', storeData, false);
 
-    {
-        alert("No Blank Values Allowed");
-        return false;
-    }
-    else {
-        true;
-
-    }
-}
-
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      
-    } else {
-      x.style.display = "none";
-    }
-  }
 function defineMyObject(){
     let counter = 0;
     for (let obj of myArray) {
@@ -126,21 +94,23 @@ findSum()
 findMax()
 
 
-// Date and Time 
+
+Date and Time 
 
 
-// var todayDate = moment().format('MMMM Do YYYY, h:mm:ss a');
-//       $("#currentDay").html(todayDate);
-// var currentDay = null,
-//       date = null;
+var todayDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+      $("#currentDay").html(todayDate);
+var currentDay = null,
+      date = null;
 
-// var update = function () {
-//   date = moment(new Date())
-//   currentDay.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
-// };
+var update = function () {
+  date = moment(new Date())
+  currentDay.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+};
 
-// $(document).ready(function(){
-//   currentDay = $('#currentDay')
-//   update();
-//   setInterval(update, 1000);
-// });
+$(document).ready(function(){
+  currentDay = $('#currentDay')
+  update();
+  setInterval(update, 1000);
+});
+
